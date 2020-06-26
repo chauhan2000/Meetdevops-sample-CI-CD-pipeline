@@ -5,7 +5,7 @@ pipeline {
     
       stage('Sonar Analysis') {
         steps{
-    when(1!=0) {
+    if(1!=0) {
         echo 'Excecuted only on master branch.'
     }
       }
