@@ -2,8 +2,9 @@ pipeline {
   agent any
   stages 
   {
-    steps{
+    
       stage('Sonar Analysis') {
+        steps{
     when (BRANCH_NAME != 'master') {
         echo 'Excecuted only on master branch.'
     }
