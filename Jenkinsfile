@@ -2,11 +2,11 @@ pipeline {
   agent any
   stages 
     {
-      stage('Analyize') {
-      steps {
-        bat 'mvn sonar:sonar -Dsonar.host.url=http://localhost:9000 -Dsonar.login=22646a19192340ab4e588feecd1f377388bf34a8'
-      }
+      stage('Sonar Analysis') {
+    when (BRANCH_NAME != 'master') {
+        echo 'Excecuted only on master branch.'
     }
+}
     stage('Compile') {
       steps {
         bat 'mvn compile'
