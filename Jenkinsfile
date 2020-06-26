@@ -22,12 +22,12 @@ pipeline {
         bat 'mvn install'
       }
     }
-      stage('Deploy') {
+      stage('Artifacts to nexus') {
       steps {
         bat 'mvn deploy'
       }
     }
-      stage('tom') {
+      stage('Deplot to tomcat') {
       steps {
         bat 'mvn tomcat7:deploy'
       }
