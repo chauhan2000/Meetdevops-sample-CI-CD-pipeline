@@ -8,7 +8,7 @@
   <distributionManagement>
     <snapshotRepository>
       <id>nexus01</id>
-      <url>http://localhost:8081/repository/repo2/</url>
+      <url>http://localhost:8082/repository/meetdevops-snap/</url>
     </snapshotRepository>
   </distributionManagement>
   
@@ -25,7 +25,7 @@
 	<artifactId>tomcat7-maven-plugin</artifactId>
 	<version>2.2</version>
 	<configuration>
-		<url>http://localhost:9090/manager/text</url>
+		<url>http://localhost:8083/manager/text</url>
 		<server>tomcat01</server>
 		<!--<path>/mkyongWebApp</path>-->
 	</configuration>
@@ -45,7 +45,7 @@
       </executions>
       <configuration>
         <serverId>nexus01</serverId>
-        <nexusUrl>http://localhost:8081/</nexusUrl>
+        <nexusUrl>http://localhost:8082/</nexusUrl>
         <skipStaging>true</skipStaging>
       </configuration>
     </plugin>
